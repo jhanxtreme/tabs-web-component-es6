@@ -1,5 +1,5 @@
-;(function(){
-
+;(function(document){
+    'use strict';
     customElements.define('tab-component', class extends HTMLElement{
         constructor(){
             super();
@@ -173,12 +173,12 @@
         }
 
         static get observedAttributes(){
-            return ['buttons-width']
+            return ['buttons-width'];
         }
 
         attributeChangedCallback(name, oldVal, newVal) {
-            console.log('attributeChangedCallback', name, oldVal, newVal);
+            // console.log('attributeChangedCallback', name, oldVal, newVal);
         }
     });
 
-})();
+})(document);
