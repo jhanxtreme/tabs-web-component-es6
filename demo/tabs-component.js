@@ -51,6 +51,10 @@
         }
         
         connectedCallback() {
+            if(this.parentElement.nodeName !== 'TABS-COMPONENT'){
+                console.error('No parent tabs');
+                return;
+            }
             this.updateTab();
         }
 
@@ -104,6 +108,11 @@
             let tabsButtonsElement =  this.root.querySelector('.tab-buttons');
             let tabComponentsElements = this.querySelectorAll('tab-component');
 
+            if(tabComponentsElements.length === 0){
+                console.error('No tab items.');
+                return;
+            }
+
             let currentContent = null; //default
             let previousContent = null;
             let currentBtn = null;
@@ -141,7 +150,6 @@
 
                 //add click events to the buttons
                 button.onclick = (buttonEvent)=>{
-
                     //content
                     previousContent = currentContent;
                     currentContent = elem;
