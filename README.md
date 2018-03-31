@@ -2,7 +2,7 @@
 This is simple tabs web component written in ES6.
 
 # Usage
-{::nomarkdown}
+
 &lt;tabs-component buttons-width="full"&gt;<br />
     &lt;tab-component title="tab1" active="true"&gt;<br />
         ..YOU CONTENT GOES HERE
@@ -14,5 +14,3 @@ This is simple tabs web component written in ES6.
         ..YOU CONTENT GOES HERE
     &lt;/tab-component&gt;<br />
 &lt;/tabs-component&gt;<br />
-
-{:/}
